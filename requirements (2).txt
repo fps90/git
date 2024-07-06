@@ -1,1 +1,4 @@
 telebot
+pyrogram 
+python-telegram-bot 
+telethon
