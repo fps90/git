@@ -11,12 +11,12 @@ from database import *
 config = configparser.ConfigParser() 
 config.read("jello.ini")
 
-api_id       = config['owner']['id'];
-api_hash = config['owner']['hash'];
+api_id       = config['owner']['8934899'];
+api_hash = config['owner']['bf3e98d2c351e4ad06946b4897374a1e'];
 client        = telethon.TelegramClient('signerAccounts', api_id, api_hash);
 
 
-token = config['7471168003:AAEqgwCBucnJyZVfF6EydXJWkZbIppWvlqE']['signer'];
+token = config['API_KEYs']['7471168003:AAEqgwCBucnJyZVfF6EydXJWkZbIppWvlqE'];
 botID  =  int(token.split(':')[0]);
 admin = config['owner']['admin'];
 Adder  = config['owner']['adder'];
