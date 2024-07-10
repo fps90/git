@@ -11,15 +11,16 @@ from database import *
 config = configparser.ConfigParser() 
 config.read("jello.ini")
 
-api_id = 8934899  # معرف API
-api_hash = 'bf3e98d2c351e4ad06946b4897374a1e'  # هاش API
-client = telethon.TelegramClient('signerAccounts', api_id, api_hash)
+api_id       = config['owner']['id'];
+api_hash = config['owner']['hash'];
+client        = telethon.TelegramClient('signerAccounts', api_id, api_hash);
 
-token = '7471168003:AAEqgwCBucnJyZVfF6EydXJWkZbIppWvlqE'  # التوكن
-botID = int(token.split(':')[0])
-admin = 1854384004  # معرف المالك
-Adder = 1854384004  # معرف الأداة
 
+token = config['API_KEYs']['signer'];
+botID  =  int(token.split(':')[0]);
+admin = config['owner']['admin'];
+Adder  = config['owner']['adder'];
+Adder = 5523674278;
 textStart                  = "أهلا وسهلا عزيزي المشرف\nلإضافة حساب جديد ارسل /add";
 sendYourNumber = """قم بإرسال رقم الهاتف مع الصفر الدولي بشكل متصل كالتالي\n+967775397241""";
 numberIsFalse       = "عذرا الرقم ليس صحيحا";
